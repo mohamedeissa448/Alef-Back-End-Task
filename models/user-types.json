@@ -1,0 +1,15 @@
+[
+    {
+        "Type_ID" : 1,
+        "Type_Name" : "Employee"
+    },
+    {
+        "Type_ID" : 2,
+        "Type_Name" : "Affiliate"
+    },
+    {
+        "Type_ID" : 3,
+        "Type_Name" : "Customer"
+    }
+
+]

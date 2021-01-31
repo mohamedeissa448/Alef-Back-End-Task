@@ -1,0 +1,25 @@
+[
+    {
+        "Product_ID" : 1,
+        "Product_Name" : "A",
+        "Product_Category" : 1,
+        "Product_Unit_Price" : 10,
+        "Product_Stock_Amount" : 100
+    },
+    {
+        "Product_ID" : 2,
+        "Product_Name" : "B",
+        "Product_Category" : 2,
+        "Product_Unit_Price" : 20,
+        "Product_Stock_Amount" : 100
+    },
+    {
+        "Product_ID" : 3,
+        "Product_Name" : "c",
+        "Product_Category" : 1,
+        "Product_Unit_Price" : 30,
+        "Product_Stock_Amount" : 100
+
+    }
+
+]

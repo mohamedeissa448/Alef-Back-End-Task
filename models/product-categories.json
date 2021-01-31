@@ -1,0 +1,15 @@
+[
+    {
+        "Category_ID" : 1,
+        "Category_Name" : "Grocery"
+    },
+    {
+        "Category_ID" : 2,
+        "Category_Name" : "Electronic"
+    },
+    {
+        "Category_ID" : 3,
+        "Category_Name" : "HomeMade"
+    }
+
+]
