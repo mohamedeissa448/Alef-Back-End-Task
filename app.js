@@ -3,6 +3,7 @@ var createError = require('http-errors');
 var express = require('express');
 var logger = require('morgan');
 var cors=require('cors')
+const path = require("path");
 var bodyParser=require('body-parser')
 var billsRouter = require("./routes/bills-route");
 
@@ -11,6 +12,10 @@ var app = express();
 app.use(logger('dev'));
 app.use(cors());
 app.use(bodyParser.json({extended:false}));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 
 

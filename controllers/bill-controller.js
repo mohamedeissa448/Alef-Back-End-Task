@@ -36,7 +36,7 @@ module.exports={
                 discount = 0.3;
             else if(userTypeName === 'Affiliate')        
                 discount = 0.1 
-            else if(userTypeName === 'Customer' && Math.ceil(Math.abs(new Date() -  userFound.Created_At) / (1000 * 60 * 60 * 24)) > 730)        
+            else if(userTypeName === 'Customer' && Math.ceil(Math.abs(new Date() -  new Date(userFound.Created_At)) / (1000 * 60 * 60 * 24)) > 730)        
                 discount = 0.05;    
             
             let foundProduct = undefined;

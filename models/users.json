@@ -3,19 +3,19 @@
         "User_ID" : 1,
         "User_Name" : "Ahmed",
         "User_Type" : 1,
-        "Created_At": "Sun Jan 31 2021 22:30:50 GMT+0200 (Eastern European Standard Time)"
+        "Created_At": "2021-01-03T22:00:00.000+00:00"
     },
     {
         "User_ID" : 2,
         "User_Name" : "Mohamed",
         "User_Type" : 2,
-        "Created_At": "Sun Jan 31 2021 22:30:50 GMT+0200 (Eastern European Standard Time)"
+        "Created_At": "2021-01-03T22:00:00.000+00:00"
     },
     {
         "User_ID" : 3,
         "User_Name" : "Malek",
         "User_Type" : 3,
-        "Created_At": "Sun Jan 31 2021 22:30:50 GMT+0200 (Eastern European Standard Time)"
+        "Created_At": "2021-01-03T22:00:00.000+00:00"
     }
 
 ]
