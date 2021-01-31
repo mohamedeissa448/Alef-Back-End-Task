@@ -36,6 +36,7 @@ module.exports={
                 discount = 0.3;
             else if(userTypeName === 'Affiliate')        
                 discount = 0.1 
+            // 730 is the total sum of 365 + 365 which means 2 years
             else if(userTypeName === 'Customer' && Math.ceil(Math.abs(new Date() -  new Date(userFound.Created_At)) / (1000 * 60 * 60 * 24)) > 730)        
                 discount = 0.05;    
             
@@ -66,13 +67,16 @@ module.exports={
                     }    
                }
             });
-            //Assume I write code to store bill in database
+            //next,I assume that I write code to store bill in database
+
             //determine total bill discount
             let totalBillAfterDiscount = 0 ;
             if(!discount){
                 //we go to option 4 which is : For every 100$ on the bill, there would be a 5$ discount (e.g. for a 990$ bill, you
                 //get 45$ as a discount).
-                totalBillAfterDiscount = totalNetBillBeforeDiscountWithoutGrocery - ((totalNetBillBeforeDiscountWithoutGrocery / 100) * 5 ); 
+                let reduce = 0
+                totalNetBillBeforeDiscountWithoutGrocery > 100 ? reduce = ((totalNetBillBeforeDiscountWithoutGrocery / 100) * 5 ) : 1==1
+                totalBillAfterDiscount = totalNetBillBeforeDiscount - reduce; 
             }else{
                 // we are from number 1 to number 3 in discount options
                 totalBillAfterDiscount = totalNetBillBeforeDiscount - totalNetBillBeforeDiscountWithoutGrocery * discount ;
