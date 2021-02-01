@@ -65,14 +65,18 @@ module.exports={
                     else{
                         totalNetBillBeforeDiscountWithoutGrocery += foundProduct.Product_Unit_Price * productCart.Product_Amount;
                     }  
-                    if(index == cartProducts.length - 1)
+                    console.log("res.finished",res.finished)
+                    if(index == cartProducts.length - 1  && !res.finished){
                         finalCalculations()
-  
+                    }
+                    
                }
+               
+
             });
             function finalCalculations (){
                 //next,I assume that I write code to store bill in database and decrease product available amount from products.json
-
+                console.log("test")
                 //determine total bill discount
                 let totalBillAfterDiscount = 0 ;
                 if(!discount){
