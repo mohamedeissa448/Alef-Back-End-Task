@@ -1,0 +1,6 @@
+to run project:
+1-npm install
+2-npm start
+to run unit test:
+1-npm i jest
+2-npm test
