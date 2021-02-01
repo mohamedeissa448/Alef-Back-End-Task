@@ -15,7 +15,6 @@ const request = async(path='', method='GET', body={})=>{
 	await fetch(fullPath, fetchOptions).then((res)=>{
 		resStatus = res.status;
 		let respond = res;
-		console.log("respondxxxx",respond)
 		return respond.json();
 	}).then((resJson) =>{
 		resBody = resJson

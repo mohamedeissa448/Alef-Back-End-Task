@@ -64,10 +64,11 @@ module.exports={
                         cartProducts [index].discount = 0 ;
                     else{
                         totalNetBillBeforeDiscountWithoutGrocery += foundProduct.Product_Unit_Price * productCart.Product_Amount;
-                    }    
+                    }  
+                    if(index == cartProducts.length - 1)
+                        finalCalculations()
+  
                }
-               if(index == cartProducts.length - 1)
-                    finalCalculations()
             });
             function finalCalculations (){
                 //next,I assume that I write code to store bill in database and decrease product available amount from products.json
