@@ -19,7 +19,7 @@ module.exports={
 
         const result = schema.validate(req.body)
         if(result.error){
-            return res.status(400).json({message : result.error.details[0].message})
+            return res.status(400).json({message : result.error.details[0].message.replace('\"','').replace('\"','')})
         }else{
             const {User_ID ,Cart : cartProducts} = req.body;
 
@@ -67,7 +67,7 @@ module.exports={
                     }    
                }
             });
-            //next,I assume that I write code to store bill in database
+            //next,I assume that I write code to store bill in database and decrease product available amount from products.json
 
             //determine total bill discount
             let totalBillAfterDiscount = 0 ;
