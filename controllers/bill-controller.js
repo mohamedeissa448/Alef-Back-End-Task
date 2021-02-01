@@ -7,6 +7,7 @@ const productCategories =require("../models/product-categories.json");
 module.exports={
 
     addBill:(req,res)=>{
+        console.log("body",req.body)
         //validation user input provided in request body
         const schema = Joi.object({
             User_ID : Joi.number().min(1).required(),
@@ -77,7 +78,9 @@ module.exports={
                     //we go to option 4 which is : For every 100$ on the bill, there would be a 5$ discount (e.g. for a 990$ bill, you
                     //get 45$ as a discount).
                     let reduce = 0
-                    totalNetBillBeforeDiscountWithoutGrocery >= 100 ? reduce = ((totalNetBillBeforeDiscountWithoutGrocery / 100) * 5 ) : 1==1
+                    totalNetBillBeforeDiscountWithoutGrocery >= 100 ? reduce = (Math.floor((totalNetBillBeforeDiscountWithoutGrocery / 100))
+                     * 5 ) : 1==1
+                   console.log("reduce",reduce)
                     totalBillAfterDiscount = totalNetBillBeforeDiscount - reduce; 
                 }else{
                     // we are from number 1 to number 3 in discount options
